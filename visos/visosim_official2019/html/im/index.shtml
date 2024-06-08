@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <LINK rel="stylesheet" type="text/css" href="style.css">
+    <script src="http://d3js.org/d3.v3.js"></script>
+    <script src="visosim.js"></script>
+    <script src="script.js"></script>
+
+  </head>
+
+  <body onload="Load()">
+    <table border="0" style="width:100%;">
+      <tr>
+        <td>
+          <table border="0" style="max-width:800px; display: block;  margin-left: auto;  margin-right: auto;" >
+            <tr>
+              <td>
+                &nbsp;&nbsp;&nbsp;
+              </td>
+              <td >
+                <img  src="../VISOS.png" alt="" style="max-height:115px; width: auto; height: auto;">
+              </td>
+              <td  style="width:100%" > 
+                <h1><p style="color:#002147" class="STYLE0"><i>VISOSim</i><br>&mdash; <a target="_black" href="http://www-pnp.physics.ox.ac.uk/~luxi/visos/">VISualisation of OScillation</a><br>interactive mode</p></h1>
+              </td>
+              <td >
+                <img  src="../ox_brand1_pos.gif" alt="" style="max-width:115px;">
+              </td>
+              <td>
+                &nbsp;&nbsp;&nbsp;
+              </td>
+            </tr>
+            <tr>
+              <td height="10px"></td>
+            </tr>
+          </table>
+
+          <!-- Section below is for all the buttons -->
+          <center>
+          <table border="0" class="STYLE5">
+              <tr>
+              <td width="20%">sin<sup>2</sup> &#977;<sub>12</sub><br><input type="text" style="width: 60px" id="theta12"></td>
+              <td width="20%">sin<sup>2</sup> &#977;<sub>23</sub><br><input type="text" style="width: 60px" id="theta23"></td>
+              <td width="20%">sin<sup>2</sup> &#977;<sub>13</sub><br><input type="text" style="width: 60px" id="theta13"></td>
+              <td width="20%"><button type="button" class="hov; STYLE6" onclick="Default()">Default</button><br>(<a target="_blank" href="http://pdg.lbl.gov/2019/reviews/rpp2018-rev-neutrino-mixing.pdf">PDG 2018</a>)</td>
+              <td width="20%"><button type="button" class="hov; STYLE6" onclick="Bimaximal()">Bimaximal</button><br>(<a target="_blank" href="https://arxiv.org/abs/hep-ph/9806387">arXiv</a>)</td>
+            </tr>
+            <tr>
+              <td height="10px"></td>
+            </tr>
+            <tr>
+              <td width="20%">&#916;m<sup>2</sup><sub>21</sub><text class="STYLE2"> (eV<sup>2</sup>)</text><br><input type="text" style="width: 60px" id="dm^2_21"></td>
+              <td width="20%">&#916;m<sup>2</sup><sub>32</sub><text class="STYLE2"> (eV<sup>2</sup>)</text><br><input type="text" style="width: 60px" id="dm^2_32"></td>
+              <td width="20%">&#948;<sub>CP</sub><text class="STYLE2"> (&#176;)</text><br><input type="text" style="width: 60px" id="cp">     </td>
+              <td width="20%"><button type="button" class="hov; STYLE6" onclick="Tribimaximal()">Tribimaximal</button><br>(<a target="_blank" href="https://en.wikipedia.org/wiki/Tribimaximal_mixing">Wiki</a>)</td>
+              <td width="20%"><button type="button" class="hov; STYLE6" onclick="Trimaximal()">Trimaximal</button><br>(<a target="_blank" href="https://en.wikipedia.org/wiki/Trimaximal_mixing">Wiki</a>)</td>
+            </tr>
+          </table>
+          <table border="0" class="STYLE5">
+            <tr>
+              <td height="15px"></td>
+            </tr>
+            <tr>
+              <td width="25%">Flavor<br><select class="STYLE6" id="neutrino">
+                  <option value="1">e</option>
+                  <option value="2">&mu;</option>
+                  <option value="3">&tau;</option>
+                  <option value="-1">Anti-e</option>
+                  <option value="-2">Anti-&mu;</option>
+                  <option value="-3">Anti-&tau;</option>
+              </select></td>
+              <td width="25%">Energy (GeV)<br><input type="text" class="STYLE6" id="energy"></td>
+              <td width="25%">Distance (km)<br><input type="text" class="STYLE6" id="distance"></td>
+              <td width="25%">Matter Density<br><select class="STYLE6" id="density">
+                  <option value="0">Vacuum</option>
+                  <option value="2.6">Earth Crust</option>
+              </select></td>
+            </tr>
+          </table>
+          <table border="0" class="STYLE5">
+            <tr>
+              <td height="10px"></td>
+            </tr>
+            <tr>
+              <td width="25%"><button type="button" class="hov; STYLE6" onclick="DayaBay()">Daya Bay</button></td>
+              <td width="25%"><button type="button" class="hov; STYLE6" onclick="DUNE()">DUNE <font size="2">(1. OM*)</font></button></td>
+              <td width="25%"><button type="button" class="hov; STYLE6" onclick="DUNELE()">DUNE <font size="2">(2. OM)</font></button></td>
+              <td width="25%"><button type="button" class="hov; STYLE6" onclick="HKK()">HKK</button></td>
+            </tr>
+          </table>
+          <table border="0" class="STYLE5">
+            <tr>
+              <td height="10px"></td>
+            </tr>
+            <tr>
+              <td width="25%"><button type="button" class="hov; STYLE6" onclick="JUNO()">JUNO</button></td>
+              <td width="25%"><button type="button" class="hov; STYLE6" onclick="KamLAND()">KamLAND</button></td>
+              <td width="25%"><button type="button" class="hov; STYLE6" onclick="NOvA()">NOvA</button></td>
+              <td width="25%"><button type="button" class="hov; STYLE6" onclick="T2K()">T2K/HK</button></td>
+            </tr>
+          </table>
+          <table border="0" class="STYLE5">
+            <tr>
+              <td height="10px"></td>
+            </tr>
+            <tr>
+              <!-- <td width="25%"><button type="button" class="hov; STYLE6" onclick="nuSTORM()">nuSTORM</button></td> -->
+            </tr>
+          </table>
+          <p style="font-size:small; font-family: Arial, Helvetica, sans-serif; text-align: left; width:100%; max-width:800px;">*OM: Oscillation Maximum</p>
+          <table border="0" class="STYLE5">
+            <tr>
+              <td><button type="button" class="hov; STYLE6" onclick="Clear()">Clear</button></td>
+            </tr>
+            <tr>
+              <td height="10px"></td>
+            </tr>
+          </table>
+
+          <hr>
+
+          <table border="0" class="STYLE5">
+            <tr>
+              <td height="10px"></td>
+            </tr>
+            <tr>
+              <td width="25%"><input type="radio" name="button" id ="overwrite"><label> Overwrite</label></td>
+              <td width="25%"><input type="radio" name="button" id ="overlay"><label> Overlay</label></td>
+              <td width="25%"><button id="start" class="hov; STYLE6">Run</button></td>
+              <td width="25%"><button id="reset" class="hov; STYLE6">Reset</button></td>
+            <tr>
+              <td height="40px"></td>
+            </tr>
+          </table>
+
+
+          <!-- Section for button ends -->
+          <table border="0" class="STYLE5">
+            <tr><td>
+            <!-- <div class="wrap"> -->
+              <div id="Animationdiv"></div>
+            <!-- </div> -->
+            </td></tr>
+            <tr>
+              <td height="40px"></td>
+            </tr>
+            <tr><td>
+            <!-- <div class="wrap"> -->
+              <div id="Legenddiv"></div>
+            <!-- </div> -->
+            </td></tr>
+          </table>
+          </center>
+
+          <hr>
+
+          <!--This last section is for making changes to text below Animation  -->
+          <p class="STYLE1"><a name="Contributors"></a>Contributors</p>
+          <p class="STYLE2"><a target="_blank" href="http://www.linkedin.com/in/rasched-haidari-b71a33134">Rasched Haidari</a>, University of Oxford (with support from Oxford Particle Physics Summer Internship Programme 2019)</p>
+          <p class="STYLE2"><a target="_blank" href="http://www-pnp.physics.ox.ac.uk/~luxi/">Xianguo Lu</a>, University of Oxford</p>
+
+          <p class="STYLE1">More Information on Neutrino Experiments</p>
+          <p class="STYLE2">
+            <a target="_black" href="https://en.wikipedia.org/wiki/Daya_Bay_Reactor_Neutrino_Experiment">Daya Bay</a><br>
+            <a target="_black" href="https://en.wikipedia.org/wiki/Deep_Underground_Neutrino_Experiment">DUNE</a><br>
+            <a target="_black" href="https://en.wikipedia.org/wiki/Hyper-Kamiokande">HK</a><br>
+            <a target="_black" href="https://indico.snu.ac.kr/indico/event/47/">HKK</a><br>
+            <a target="_black" href="https://en.wikipedia.org/wiki/Jiangmen_Underground_Neutrino_Observatory">JUNO</a><br>
+            <a target="_black" href="https://en.wikipedia.org/wiki/Kamioka_Liquid_Scintillator_Antineutrino_Detector">KamLAND</a><br>
+            <a target="_black" href="https://en.wikipedia.org/wiki/NOvA">NOvA</a><br>
+            <!-- <a target="_black">nuSTORM</a><br>-->
+            <a target="_black" href="https://en.wikipedia.org/wiki/T2K_experiment">T2K</a>
+          </p>
+          <p class="STYLE1"><a name="References"></a>References</p>
+          <p class="STYLE2">[1] R. Wendell et al.,<a target="_blank" href="http://webhome.phy.duke.edu/~raw22/public/Prob3++/">"Prob3++ software for computing three flavor neutrino oscillation probabilities"</a>, 2018</p>
+          <p class="STYLE1"><a target="_black" href="http://www-pnp.physics.ox.ac.uk/~luxi/visos/">Back to <i>VISOS</i> Homepage</a></p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
