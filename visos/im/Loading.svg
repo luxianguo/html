@@ -1,8 +1,0 @@
-<svg width="84" height="84" id="svg" xmlns="http://www.w3.org/2000/svg">
-    <circle r="40" cx="42" cy="42" style="fill: none;stroke: black;stroke-width: 4;">
-        <animate attributeName="stroke-dasharray" dur="3s" repeatCount="indefinite"
-                 keyTimes="0;0.5;1" values="0 251.4;125.7 125.7;0 251.4" />
-        <animate attributeName="stroke-dashoffset" dur="3s" repeatCount="indefinite"
-                 keyTimes="0;0.5;1" values="0;-100;-251.4" />
-    </circle>
-</svg>
