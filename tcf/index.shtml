@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+ 
+    <!--#include virtual="../header.html" -->    
+    
+    <title>TPC Coherent Fit</title>
+    <style type="text/css">
+      img{
+      width:100%;
+      max-width:567px;
+      }
+    </style>
+  </head>
+  
+  <body>
+
+    <a name="top"></a>
+    <p class="STYLE0">TPC Coherent Fit</p>
+    
+    <p class="STYLE2"><a href="#What_is_it_about">What is it about?</a><br>
+      <a href="#How_does_it_work">How does it work?</a><br>
+      <a href="#What_do_I_expect_from_it">What do I expect from it?</a><br>
+      <a href="#Is_the_program_available_somewhere">Is the program available somewhere?</a><br>
+      <a href="#References">Reference</a> </p>
+    
+    <p class="STYLE1"><a href=".." target="_top">[Back to homepage]</a> </p>
+    
+    <hr>
+
+    <p class="STYLE1"><a name="What_is_it_about"></a>What is it about? </p>
+    <p style="text-align: center;"> <img alt="tpcsig" src="11afitdataAnchor5.png"></p>
+    <p class="STYLE2">What we see in this figure is the signal distribution (normalized in each momentum bin) of the Time Projection Chamber (TPC) in the ALICE experiment at the LHC. The pattern is clear. We see pions (&pi;), kaons (K), electrons (e), protons (p), and some tiny amount of deuterons (d). In <span style="font-style: italic;">some</span> regions, we see separation between different species. Now the question is:
+      <ul>
+        <li class="STYLE2">How can we know exactly what the signal looks like for a particular particle species?</li>
+        <li class="STYLE2">More importantly, how can we determine the particle composition in <span style="font-style: italic; ">any</span> given momentum region?</li>
+      </ul>
+      <span class="STYLE2" >The answer to the first question is needed for the calibration of the detector; the one to the second is crucial for all measurements using the TPC for the production of  identified particles.<br>
+        The <span style="font-style: italic;">TPC Coherent Fit</span> is a program which maximally utilizes the information in this figure and provides the answers to these two questions simultaneously.</span><p>
+    <p class="STYLE1"><a href="#top">[Top]</a></p>
+
+    <p class="STYLE1"><a name="How_does_it_work"></a>How does it work?</p>
+    <p class="STYLE2"> We have the following general assumptions:
+      <ul>
+        <li class="STYLE2"> The signal shape for a given particle species can be well approximated by a Gaussian distribution. The mean is described by a function of the particle velocity and the spread depends only on the mean. Existing parametrizations can be found in <a href="#1">[1]</a><a href="#2">[2]</a>. </li>
+        <li class="STYLE2">The fraction of a given particle species is a continuous function of the the momentum.</li>
+      </ul>
+      <span class="STYLE2">Accordingly a <span style="font-style: italic;">two-dimensional</span> distribution of the signal vs. momentum is constructed. An optimization procedure based on the binned maximum likelihood method is then applied to minimize the difference between the model and the data. The continuity condition for the fraction is ensured by a regularization term added to the log-likelihood. All details can be found in <a href="#3">[3]</a>.</span>
+    <p class="STYLE1"><a href="#top">[Top]</a></p>
+
+    <p class="STYLE1"><a name="What_do_I_expect_from_it"></a>What do I expect from it?</p>
+    <p class="STYLE2"> As is previously mentioned, the signal properties are extracted by the fit. The following figure shows the estimated mean signals (black curves) overlaid on top of the distribution for real data.
+    <p style="text-align: center;"><img alt="calibration" src="11amn2d.png"> </p> 
+    <p class="STYLE2"> 
+The advantage of the coherent fit (without regularization) over the conventional approach -- the incoherent fit which fits the signal in individual momentum bins separately -- is
+demonstrated in a ToyMC where a signal-momentum-distribution is generated with  given parametrizations of the signal mean and spread. The same parametrizations are used in 
+the coherent and incoherent fit so that the comparison between the
+extracted fractions is parametrization-independent and only depends on the mechanism
+how the intra-bin information is organized. The following figure compares the corresponding extracted
+fractions to the true values. It shows a dramatic improvement of the unbiasedness
+when the intra-correlation between momentum-bins is used.
+    <p style="text-align: center;"><img alt="fraction" src="TOY4fithp0.png"> <img alt="fraction" src="TOY4mn2dp0.png"> </p>
+    <span class="STYLE2">The particle fractions of the proton, pion and kaon from real data  are shown in the figure below (the electron fraction which is at per mil level is not shown). Open symbols are the outcome without requiring the continuity of the fractions; solid symbols are the final results with the regularization. It shows that even in the momentum regions where there is no separation, useful information is obtained by extrapolation from neighboring regions via the continuity condition.<br>
+    (More about the figure: The fractions being "uncorrected" means that they are not corrected for detection efficiencies which are anyway not relevant here.)</span>
+    <p style="text-align: center;"><img alt="fraction" src="CMP11amn2dp0VSpt_logx.png"> </p>
+    <span class="STYLE2">The following figures compare the extracted fractions by the TPC coherent fit (TCF)  to the  Monte Carlo truth in different collision systems at ALICE. The first uncertainty to notice is the residual biases at the pion-kaon crossing at p around 1 GeV/c and at the kaon-proton crossing at around 2 GeV/c. Further improvement using subsidiary PID is discussed in <a href="#3">[3]</a>. The second uncertainty is due to a deteriorated dE/dx  resolution. For Pb-Pb most central collisions where the ALICE TPC dE/dx resolution is about 7%, the bias of kaon, which is the biggest among all hadrons, is about 20%. Despite these uncertainties, the interesting points to take  are the following. <br>
+      <ul>
+        <li class="STYLE2"> With a maximum 10% bias, the  estimate for fractions of hadrons in LHC proton-proton collisions can go up to momentum beyond 40 GeV/c. </li>
+        <li class="STYLE2"> The electron fraction, even though at a per mil level (the fractions in the figures are multiplied by 10), is also accessible by the fit.</li>
+    </ul> </span>
+    <p style="text-align: center;"><img alt="fraction" src="MCpp2760_comMC.png"> <img alt="fraction" src="MCpp7000_comMC.png"> </p>
+    <p style="text-align: center;"><img alt="fraction" src="MCPbPb6080_comMC.png"> <img alt="fraction" src="MCPbPb4060_comMC.png"></p>
+    <p style="text-align: center;"><img alt="fraction" src="MCPbPb2040_comMC.png"> <img alt="fraction" src="MCPbPb1020_comMC.png"> </p>
+    <p style="text-align: center;"><img alt="fraction" src="MCPbPb0510_comMC.png"> <img alt="fraction" src="MCPbPb0005_comMC.png"></p>
+    <p class="STYLE1"><a href="#top">[Top]</a></p>
+
+    <p class="STYLE1"><a name="Is_the_program_available_somewhere"></a>Is the program available somewhere?</p>
+    <p class="STYLE2"> Yes. Here is the tarball: click to download (~106K) <a href="../files/r539_TCF.tar.gz" target="_blank"> v0.4.2 (22.Jul.2014)</a>, <a href="../files/TCF.tar.gz" target="_blank">v0.4.5 (05.Dec.2015)</a>. <br>
+      In case of questions or comments, please feel free to contact me: lu.xianguo__at__gmail.com.</p>
+    <p class="STYLE1"><a href="#top">[Top]</a></p>
+
+    <p class="STYLE1"><a name="References"></a>References</p>
+    <p class="STYLE2">
+      <a name="1"></a>[1] D. Decamp et al. [ALEPH Collaboration], "ALEPH: A detector for electron-positron annnihilations at LEP," Nucl. Instrum. Meth. A 294 (1990) 121 [Erratum-ibid. A 303 (1991) 393].<br>
+      <a name="2"></a>[2] J. Beringer et al. [Particle Data Group Collaboration], "Review of Particle Physics (RPP)," Phys. Rev. D 86 (2012) 010001.<br>
+      <a name="3"></a>[3] Xianguo Lu, <a href="http://www.ub.uni-heidelberg.de/archiv/15651" target="_blank">
+"Exploring the performance limits of the ALICE Time Projection Chamber and Transition Radiation Detector for measuring identified hadron production at the LHC"</a>, doctoral dissertation at the University of Heidelberg (2013). CERN-THESIS-2013-179.
+    </p>
+
+    <p class="STYLE1"><a href="#top">[Top]</a></p>
+
+    <!-- <script language="JavaScript">getDate()</script> -->
+    
+  </body>
+</html>

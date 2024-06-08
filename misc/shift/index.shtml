@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <!--#include virtual="../../header.html" -->    
+  
+    <title>shift</title>
+  
+    <style type="text/css">
+      body {
+      background-color: #000;
+      }
+      a:link {
+      color: #0F0;
+      }
+      a:visited {
+      color: #0F0;
+      }
+      .STYLEA {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #0F0;
+      text-align: center;
+      font-weight: bold;
+      }
+      img{
+      width:100%;
+      max-width:800px;
+      }
+    </style>
+
+  </head>
+  
+  <body>
+    <hr></hr>
+    <p class="STYLEA" style="text-align: left">First MINERvA shift (23-24 February 2017)</p>
+    <img src="20170224_setup.JPG">
+    <p class="STYLEA" style="text-align: left">Event display</p>
+    <img src="20170224_eventdis.PNG">
+
+    <hr></hr>
+    <p class="STYLEA" style="text-align: left">First T2K shift (12-21 December 2014)</p>
+    <img src="20141213_223319.jpg">
+    <p class="STYLEA" style="text-align: left">E-log</p>
+    <img src="20141212log.png">
+
+    <hr></hr>
+    <p class="STYLEA" style="text-align: left">First ALICE shift (3-8 April 2010)</p>
+    <img src="20100407_042256.jpg">
+    <p class="STYLEA" style="text-align: left">Logbook</p>
+    <img src="20100403TPC.png">
+    <img src="20100403TRD.png">
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+
+    <!--#include virtual="../header.html" -->    
+
+    <title>Transition Radiation from Cosmic Muons</title>
+    <style type="text/css">
+      img{
+      width:100%;
+      max-width:567px;
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    <p class="STYLE0">Transition Radiation from Cosmic Muons</p>
+
+    <p class="STYLE1"><a href=".." target="_top">[Back to homepage]</a> </p>
+
+    <hr>
+
+    <p style="text-align: center;"><img  alt="alice_trd" style="min-width:100px; max-width:800px"   width="100%"   src="alice_trd.png"></p>
+
+    <p class="STYLE2">This figure shows the signal of the Transition Radiation Detector (TRD) in the ALICE experiment at the LHC. The data are from various sources: <br>
+      <ul>
+        <li class="STYLE2">(blue points, magenta squares) pions and electrons from the testbeam measurements with prototype chambers <a href="#1">[1]</a>,</li>
+        <li class="STYLE2">(green stars) protons, pions and electrons from proton-proton collisions at the LHC <a href="#2">[2]</a>, </li>
+        <li class="STYLE2"> and (red and black triangles) muons from cosmic ray measurements <a href="#3">[3]</a>. </li>
+      </ul>
+      <span class="STYLE2">In <a href="#3">[3]</a> you can find the answers to the following questions concerning the muon measurements which were performed during the pauses between the LHC collisions:<br>
+        <ul>
+          <li class="STYLE2">How did we manage to measure the momentum up to 1 TeV/c only using the ALICE TPC?</li> 
+          <li class="STYLE2">How did we "switch on" and "off" the transition radiation (TR) without even "touching" the detector? (dE/dx is a jargon for the collisional ionization.)</li>
+    </ul></span>
+    
+    <p class="STYLE1">References</p>
+    <p class="STYLE2">
+      <a name="1"></a>[1] R. Bailhache et al. [ALICE TRD Collaboration], "New test beam results with prototypes of the ALICE TRD," Nucl. Instrum. Meth. A 563 (2006) 310.<br>
+      <a name="2"></a>[2] M. Fasel, "Single-electron analysis and open charm cross section in proton-proton collisions at \sqrt{s} = 7 TeV," Ph.D. Thesis at Technische Universit&auml;t Darmstadt (2012). <br>
+      <a name="3"></a>[3] Xianguo Lu,  <a href="http://www.ub.uni-heidelberg.de/archiv/15651" target="_blank">"Exploring the performance limits of the ALICE Time Projection Chamber and Transition Radiation Detector for measuring identified hadron production at the LHC"</a>,  doctoral dissertation at the University of Heidelberg (2013). CERN-THESIS-2013-179.
+    </p>
+    
+    <!-- <script language="JavaScript">getDate()</script> -->
+
+  </body>
+</html>
