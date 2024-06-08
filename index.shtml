@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+
+    <!--#include virtual="header.html" -->    
+
+    <title>Homepage of Xianguo Lu</title>
+    
+    <style type="text/css">
+      body {
+      background-color: #FFFFFF; <!-- #999; -->
+      }
+      body,td,th {
+      color: #999; <!-- #FFFFFF; -->
+      }
+      a:link {
+      color: #999; <!-- #FFFFFF; -->
+      }
+      a:visited {
+      color: #999; <!-- #FFFFFF; -->
+      }
+    </style>
+  </head>
+  
+  <body>
+    <table border="0" width="100%">
+      <tr>
+        <td style="min-width:300px" width="59%" > 
+          <p class="STYLE0">LU Xianguo / &#x5362;&#x663E;&#x56FD; <a 
+                                                                                     href="https://translate.google.co.uk/#zh-CN/zh-CN/%E5%8D%A2%E6%98%BE%E5%9B%BD" 
+                                                                                     target="_blank" 
+                                                                                     ><img src="audio.gif" border="0" height="20" width="20"></a></p>
+          <p class="STYLE1" style="text-align: center;">
+            <a href="#interest">Research Interest</a>
+            &nbsp;&nbsp;<a href="#theses">Theses</a> 
+            &nbsp;&nbsp;<a href="#talks">Public Talks</a> 
+            &nbsp;&nbsp;<a
+                           href="http://inspirehep.net/search?ln=en&amp;p=find+a+Xian.Guo.Lu.1&amp;of=hb&amp;action_search=Search" 
+                           target="_blank" 
+                           >Publications</a>&nbsp;&nbsp;<a 
+                                                                                        href="http://uk.linkedin.com/in/xianguolu" 
+                                                                                        style="text-decoration:none;" 
+                                                                                        target="_blank" 
+                                                                                        ><span style="font: 80% Arial,sans-serif; color:#0783B6;"><img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_in_20x15.png" width="20" height="15" alt="View Xianguo Lu's CV" style="vertical-align:middle" border="0">CV</span></a>&nbsp;&nbsp;<a href="#misc">Miscellaneous</a> <!-- <a href="http://uk.linkedin.com/pub/xianguo-lu/5b/745/b29/en" target="_blank">LinkedIn</a> -->
+          </p>
+          <br>
+          <p class="STYLE1" style="text-align: left;">Affiliation</p>
+          <ul>
+            <li class="STYLE2">Ernest Rutherford Fellow, <a href="https://www2.physics.ox.ac.uk/contacts/people/luxi"  target="_blank">Department of Physics</a>, University of Oxford</li>
+            <li class="STYLE2">Senior Research Fellow, <a href="https://www.pmb.ox.ac.uk/fellows-staff/profiles/dr-xianguo-lu"  target="_blank">Pembroke College Oxford</a></li>
+          </ul>
+        </td>
+        <td>
+          <table border="0" align="right">
+            <tr><td>
+                <img  src="20171121.jpg"        alt="" style="min-width:220px; max-width:400px"   width="100%" >  <!-- min-width:373px; max-width:400px -->
+            </td></tr>
+            <tr><td>
+                <p class="STYLE3" align="right"><!-- 22.10.2013, Heidelberg , Sat 05 Aug 2006 05:43:28 PM BST, Hamburg,   --> <!-- 11 Apr. 2015 Oxford University Museum of Natural History--> 21 Nov. 2017 Pembroke College Oxford </p>
+            </td></tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+    <p class="STYLE1"><a name="interest"></a>Research Interest</p>
+    <ul>
+      <p class="STYLE2">Selected publications can be found <a
+                                                                                                                                                                                                                                                                                                   style="font-style: italic;" 
+                                                                                                                                                                                                                                                                                                   href="pub.shtml"  
+                                                                                                                                                                                                                                                                                                   target="_blank" 
+                                                                                                                                                                                                                                                                                                   >here</a>. 
+
+      </p>
+      <li class="STYLE2"><img src="visos/VISOS.png" border="0" height="15"> <a 
+             href="visos"
+             target="_blank"><b><i>VISOS</i></b> (VISualisation of OScillation)</a></li>
+      <li class="STYLE2"><a 
+             href="tcf" 
+             target="_blank">TPC Coherent Fit</a></li>
+      <li class="STYLE2"><a 
+             href="muontr" 
+             target="_blank">Transition Radiation from Cosmic Muons</a></li>
+    </ul>
+    
+    <p class="STYLE1"><a name="talks"></a>Public Talks</p>
+    <ul>
+      <li class="STYLE2"><a href="https://indico.desy.de/indico/event/22933/contribution/8" target="_blank">Neutrino Physics with Accelerators</a>, 11/2019</li>
+      <li class="STYLE2"><a href="https://indico.cern.ch/event/799284/contributions/3479219/" target="_blank">Fermilab MINERvA Highlights of Neutrino Interactions</a>, 8/2019</li>
+      <li class="STYLE2"><a href="https://indico.cern.ch/event/703880/contributions/3157437/" target="_blank">MINERvA Low-Recoil Tune and its Implications</a>, 10/2018</li>
+      <li class="STYLE2"><a href="http://theory.fnal.gov/events/event/new-results-from-minerva/" target="_blank">Neutrino Shadow Play</a>, 3/2018</li>
+      <li class="STYLE2"><a href="https://indico.ihep.ac.cn/event/6329/session/2/contribution/193" target="_blank">The latest T2K neutrino oscillation results</a>, 9/2017</li>
+      <li class="STYLE2"><a href="https://indico.cern.ch/event/219436/contributions/1523314/" target="_blank">Measurement of hadron composition in charged jets from pp collisions with the ALICE experiment</a>, 5/2014</li>
+    </ul>
+
+
+    <p class="STYLE1"><a name="theses"></a>Theses</p>
+    <ul>
+      <!--href="http://cds.cern.ch/record/1622225/files/CERN-THESIS-2013-179.pdf?subformat=pdfa"--> 
+      <li class="STYLE2"><a href="http://archiv.ub.uni-heidelberg.de/volltextserver/15651/" target="_blank">CERN-THESIS-2013-179</a>, August 2013, Universit&auml;t Heidelberg, Doctoral Dissertation</li>
+
+      <li class="STYLE2"><a href="http://www-library.desy.de/preparch/desy/thesis/desy-thesis-09-043.pdf" target="_blank">DESY-THESIS-2009-043</a>, September 2009, Universit&auml;t Hamburg, Diplomarbeit</li>
+
+      <li class="STYLE2">June 2007, Peking University, <a name="B.S._Thesis"></a>B.S. Thesis <a 
+                                                                                               href="files/xglu_BSthesis_20070611.pdf" 
+                                                                                               target="_blank" 
+                                                                                               ><img src="PDF.gif" border="0" height="10" width="10"></a></li>
+    </ul>
+
+    <p class="STYLE1"><a name="misc"></a>Miscellaneous</p>
+    <ul>
+      <li class="STYLE2"><a href="misc/shift" target="_blank">Shifts in ALICE, T2K, and MINERvA</a></li>
+    </ul>
+
+    <!--<script language="JavaScript">getDate()</script>-->
+
+  </body>
+</html>
