@@ -127,6 +127,18 @@ h2{font-size:40px}.card{padding:24px}
 #research .cards>.card{padding:24px;grid-template-rows:24px 116px 1fr 150px}
 }
 @media(min-width:601px) and (max-width:760px){#research .cards{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:none}}
+
+/* Explicit equal-size research grid in reading order. */
+@media(min-width:761px){
+#research .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(2,1fr);grid-auto-flow:row;gap:26px;align-items:stretch}
+#research .cards>.card{width:100%;height:100%;min-width:0;grid-column:auto;grid-row:auto;box-sizing:border-box}
+#research .cards>.card:nth-child(1){grid-area:1/1}
+#research .cards>.card:nth-child(2){grid-area:1/2}
+#research .cards>.card:nth-child(3){grid-area:1/3}
+#research .cards>.card:nth-child(4){grid-area:2/1}
+#research .cards>.card:nth-child(5){grid-area:2/2}
+#research .cards>.card:nth-child(6){grid-area:2/3}
+}
 </style></head><body>
 <a class="skip" href="#main">Skip to content</a>
 <header><div class="container nav"><a class="brand" href="#top">Xianguo Lu <small><span lang="zh-Hans">卢显国</span></small></a><nav aria-label="Main navigation"><a href="#research">Research</a><a href="#laboratory">WarTPC</a><a href="#group">Group</a><a href="#leadership">Leadership</a><a href="#activity">Highlights</a><a href="#publications">Publications</a><a href="#join">Join us</a></nav></div></header>
