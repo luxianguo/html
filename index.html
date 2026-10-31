@@ -139,6 +139,11 @@ h2{font-size:40px}.card{padding:24px}
 #research .cards>.card:nth-child(5){grid-area:2/2}
 #research .cards>.card:nth-child(6){grid-area:2/3}
 }
+
+/* Compact link footers without the previous 150px reservation. */
+#research .cards>.card{grid-template-rows:24px 116px 1fr 100px}
+#research .cards>.card .card-links{padding-top:14px}
+@media(max-width:600px){#research .cards>.card{grid-template-rows:24px 116px 1fr 100px}}
 </style></head><body>
 <a class="skip" href="#main">Skip to content</a>
 <header><div class="container nav"><a class="brand" href="#top">Xianguo Lu <small><span lang="zh-Hans">卢显国</span></small></a><nav aria-label="Main navigation"><a href="#research">Research</a><a href="#group">Group</a><a href="#leadership">Leadership</a><a href="#activity">Highlights</a><a href="#publications">Publications</a><a href="#join">Join us</a></nav></div></header>
